@@ -2,132 +2,170 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Tools for FiveM and Unturned</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameHub - Premium Gaming Services</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #181a20;
+            color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #23262f;
+            border-radius: 18px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.22);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #57c9d6;
+        }
+        .tools-section {
+            margin-bottom: 30px;
+        }
+        .tools-section h2 {
+            color: #ffb562;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .tool-card {
+            background: #23262f;
+            border: 2px solid #36394b;
+            border-radius: 12px;
+            padding: 22px;
+            flex: 1 1 240px;
+            max-width: 320px;
+            min-width: 220px;
+            transition: box-shadow 0.3s;
+            position: relative;
+        }
+        .tool-card:hover {
+            box-shadow: 0 4px 20px rgba(87,201,214,0.15);
+            border-color: #57c9d6;
+        }
+        .tool-name {
+            font-size: 1.22em;
+            color: #57c9d6;
+            margin-bottom: 6px;
+        }
+        .tool-desc {
+            font-size: 0.97em;
+            margin-bottom: 16px;
+        }
+        .tool-btn {
+            background: linear-gradient(90deg, #57c9d6 0%, #ffb562 100%);
+            color: #181a20;
+            border: none;
+            border-radius: 7px;
+            padding: 8px 14px;
+            font-size: 0.96em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .tool-btn:hover {
+            background: linear-gradient(90deg, #ffb562 0%, #57c9d6 100%);
+        }
+        .tool-more {
+            margin-top: 10px;
+            padding: 10px;
+            background: #232e2f;
+            border-radius: 8px;
+            border-left: 4px solid #57c9d6;
+            display: none;
+        }
+        @media (max-width: 960px) {
+            .tools-list {
+                flex-direction: column;
+                gap: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Dark Header with Neon Accents -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <span class="neon-text">Game</span>Hub
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#" class="btn-neon">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="container">
+        <h1>Tools for FiveM and Unturned</h1>
 
-    <!-- Hero Section with Glowing CTA -->
-    <section class="hero">
-        <div class="container">
-            <h1 class="neon-text">PREMIUM <span>GAMING</span> SERVICES</h1>
-            <p>Enhance your gameplay with our elite solutions</p>
-            <a href="#" class="btn-neon pulse">SHOP NOW</a>
-        </div>
-    </section>
-
-    <!-- Products Grid -->
-    <section class="products">
-        <div class="container">
-            <h2>Our <span class="neon-text">Products</span></h2>
-            <div class="product-grid">
-                <!-- Product 1 -->
-                <div class="product-card">
-                    <div class="product-badge">BEST SELLER</div>
-                    <img src="https://via.placeholder.com/300x200/222/666" alt="Product">
-                    <h3>Valorant Coaching</h3>
-                    <div class="product-price">
-                        <span class="old-price">$50</span>
-                        <span class="current-price neon-text">$35</span>
+        <div class="tools-section" id="fivem-tools">
+            <h2>FiveM Tools</h2>
+            <div class="tools-list">
+                <!-- Example tool card for FiveM -->
+                <div class="tool-card">
+                    <div class="tool-name">Resource Creator</div>
+                    <div class="tool-desc">Generate template resources for your FiveM servers fast and easily.</div>
+                    <button class="tool-btn" onclick="toggleMoreInfo(this)">Show More</button>
+                    <div class="tool-more">
+                        <p>
+                            This tool lets you create <strong>__resource.lua</strong> and proper folder structures for your scripts. 
+                            <br>Visit: <a href="https://fivem.net/" target="_blank" rel="noopener">FiveM Docs</a>
+                        </p>
                     </div>
-                    <a href="#" class="btn-neon">Add to Cart</a>
                 </div>
-
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x200/222/666" alt="Product">
-                    <h3>Aim Training Guide</h3>
-                    <div class="product-price">
-                        <span class="current-price neon-text">$20</span>
+                <div class="tool-card">
+                    <div class="tool-name">Vehicle Spawn Code Generator</div>
+                    <div class="tool-desc">Easily generate vehicle spawn codes for custom cars on your FiveM server.</div>
+                    <button class="tool-btn" onclick="toggleMoreInfo(this)">Show More</button>
+                    <div class="tool-more">
+                        <p>
+                            Input car models and receive spawn codes, which you can use directly in your scripts or server console.
+                        </p>
                     </div>
-                    <a href="#" class="btn-neon">Add to Cart</a>
                 </div>
+            </div>
+        </div>
 
-                <!-- Product 3 -->
-                <div class="product-card">
-                    <div class="product-badge">NEW</div>
-                    <img src="https://via.placeholder.com/300x200/222/666" alt="Product">
-                    <h3>Game Configs</h3>
-                    <div class="product-price">
-                        <span class="current-price neon-text">$15</span>
+
+        <div class="tools-section" id="unturned-tools">
+            <h2>Unturned Tools</h2>
+            <div class="tools-list">
+                <!-- Example tool card for Unturned -->
+                <div class="tool-card">
+                    <div class="tool-name">Asset ID Finder</div>
+                    <div class="tool-desc">Look up item, vehicle, and weapon IDs for Unturned quickly.</div>
+                    <button class="tool-btn" onclick="toggleMoreInfo(this)">Show More</button>
+                    <div class="tool-more">
+                        <p>
+                            Allows you to search the full Unturned item database and copy IDs<br>
+                            Reference: <a href="https://unturnedhub.com/items" target="_blank" rel="noopener">Unturned Item Database</a>
+                        </p>
                     </div>
-                    <a href="#" class="btn-neon">Add to Cart</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-name">Permission Command Generator</div>
+                    <div class="tool-desc">Generate permissions commands for server admins and plugins easily.</div>
+                    <button class="tool-btn" onclick="toggleMoreInfo(this)">Show More</button>
+                    <div class="tool-more">
+                        <p>
+                            Choose a role, permissions, and auto-generate commands to paste into your commands.dat or via in-game chat.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>Why Choose <span class="neon-text">Us?</span></h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-shield-alt neon-text"></i>
-                    <h3>Secure</h3>
-                    <p>100% legal services with no risk</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-tachometer-alt neon-text"></i>
-                    <h3>Fast</h3>
-                    <p>Instant digital delivery</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-headset neon-text"></i>
-                    <h3>Support</h3>
-                    <p>24/7 customer service</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3 class="neon-text">GameHub</h3>
-                    <p>Premium legal gaming services</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Links</h4>
-                    <ul>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Refunds</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="#"><i class="fab fa-discord"></i> Discord</a></li>
-                        <li><a href="#"><i class="fab fa-telegram"></i> Telegram</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 GameHub. All services comply with game EULAs.</p>
-            </div>
-        </div>
-    </footer>
+    <script>
+        function toggleMoreInfo(btn) {
+            const moreDiv = btn.nextElementSibling;
+            if (moreDiv.style.display === "block") {
+                moreDiv.style.display = "none";
+                btn.textContent = "Show More";
+            } else {
+                moreDiv.style.display = "block";
+                btn.textContent = "Show Less";
+            }
+        }
+    </script>
 </body>
 </html>
