@@ -218,3 +218,92 @@ footer .social a {
         margin: 10px 0;
     }
 }
+
+/* Products Page Specific Styles */
+.products-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080');
+    padding: 120px 0 80px;
+}
+
+/* Game Tabs */
+.game-tabs {
+    background: #2a2a2a;
+    padding: 20px 0;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tab-btn {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    background: #ff6b00;
+}
+
+.tab-btn:hover:not(.active) {
+    background: #444;
+}
+
+/* Products Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 20px;
+}
+
+.product-details .price {
+    display: block;
+    font-size: 1.5rem;
+    color: #ff6b00;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.product-details ul {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.product-details ul li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.product-details ul li i {
+    color: #ff6b00;
+    margin-right: 5px;
+}
