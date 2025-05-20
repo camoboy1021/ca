@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boost Packages | EliteBoost</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header (Same as Index) -->
+    <header>
+        <div class="container">
+            <h1><span>Elite</span>Boost</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Products Hero -->
+    <section class="hero products-hero">
+        <div class="container">
+            <h2>Boost Packages</h2>
+            <p>Choose the perfect boost for your needs</p>
+        </div>
+    </section>
+
+    <!-- Game Selection Tabs -->
+    <section class="game-tabs">
+        <div class="container">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="valorant">Valorant</button>
+                <button class="tab-btn" data-tab="lol">League of Legends</button>
+                <button class="tab-btn" data-tab="apex">Apex Legends</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products">
+        <div class="container">
+            <!-- Valorant Products (Default Visible) -->
+            <div class="product-grid" id="valorant-tab">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Valorant Boost">
+                    <h3>Iron to Bronze</h3>
+                    <div class="product-details">
+                        <span class="price">$15</span>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 100% Win Guarantee</li>
+                            <li><i class="fas fa-check"></i> 24/7 Support</li>
+                            <li><i class="fas fa-check"></i> Live Progress</li>
+                        </ul>
+                        <a href="#" class="btn">Buy Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Valorant Boost">
+                    <h3>Bronze to Silver</h3>
+                    <div class="product-details">
+                        <span class="price">$25</span>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 100% Win Guarantee</li>
+                            <li><i class="fas fa-check"></i> 24/7 Support</li>
+                            <li><i class="fas fa-check"></i> Live Progress</li>
+                        </ul>
+                        <a href="#" class="btn">Buy Now</a>
+                    </div>
+                </div>
+
+                <!-- Add more Valorant products as needed -->
+            </div>
+
+            <!-- League of Legends Products (Hidden by Default) -->
+            <div class="product-grid" id="lol-tab" style="display:none;">
+                <!-- LOL products here -->
+            </div>
+
+            <!-- Apex Legends Products (Hidden by Default) -->
+            <div class="product-grid" id="apex-tab" style="display:none;">
+                <!-- Apex products here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as Index) -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 EliteBoost. All rights reserved.</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Hide all tabs
+                document.querySelectorAll('.product-grid').forEach(tab => {
+                    tab.style.display = 'none';
+                });
+                
+                // Show selected tab
+                const tabId = btn.getAttribute('data-tab') + '-tab';
+                document.getElementById(tabId).style.display = 'grid';
+            });
+        });
+    </script>
+</body>
+</html>
